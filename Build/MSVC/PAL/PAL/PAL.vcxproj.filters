@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="API">
+      <UniqueIdentifier>{30d0bf2c-f7b4-4be3-916c-0b8b7fe41a5d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="API\APIs">
+      <UniqueIdentifier>{bcfd7706-dd45-4925-b782-14bb43d7b0e2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="API\Unix">
+      <UniqueIdentifier>{ddd51ced-0b90-4693-8f63-b4f577004665}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="API\Unix\Trance">
+      <UniqueIdentifier>{71dc37ba-d472-4e8e-894a-271d51bd668e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="API\Windows">
+      <UniqueIdentifier>{e2d4c184-3320-4765-962f-0efeb5aa0481}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="API\Windows\Trance">
+      <UniqueIdentifier>{23bbcf85-3bd8-4265-a0e2-f2aa13dafe33}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common">
+      <UniqueIdentifier>{baa23928-4e3d-4725-86dd-8191598b39a8}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\..\Lib\API\System.cpp">
+      <Filter>API</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Lib\API\Unix\Trance\Trance.cpp">
+      <Filter>API\Unix\Trance</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Lib\API\Windows\Trance\Trance.cpp">
+      <Filter>API\Windows\Trance</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\..\Lib\API\System.h">
+      <Filter>API</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Lib\API\APIs\ITrance.h">
+      <Filter>API\APIs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Lib\API\Unix\Trance\Trance.h">
+      <Filter>API\Unix\Trance</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Lib\API\Windows\Trance\Trance.h">
+      <Filter>API\Windows\Trance</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Lib\Common\Config.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
