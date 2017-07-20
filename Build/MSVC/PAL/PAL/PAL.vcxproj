@@ -131,8 +131,11 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\..\Lib\API\System.cpp" />
-    <ClCompile Include="..\..\..\..\Lib\API\Unix\Trance\Trance.cpp" />
+    <ClCompile Include="..\..\..\..\Lib\API\Unix\Trance\Trance.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="..\..\..\..\Lib\API\Windows\Trance\Trance.cpp" />
+    <ClCompile Include="..\..\..\..\Lib\PAL.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\..\Lib\API\APIs\ITrance.h" />
@@ -140,6 +143,7 @@
     <ClInclude Include="..\..\..\..\Lib\API\Unix\Trance\Trance.h" />
     <ClInclude Include="..\..\..\..\Lib\API\Windows\Trance\Trance.h" />
     <ClInclude Include="..\..\..\..\Lib\Common\Config.h" />
+    <ClInclude Include="..\..\..\..\Lib\PAL.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -27,12 +27,13 @@ namespace PAL
 			if (s_TranceInstance == nullptr)
 			{
 #if defined(__BUILD_FOR_UNIX__)
-				s_TranceInstance = std::make_shared<Unix::Trance>();
+				s_TranceInstance = ITrancePtr(new Unix::Trance());
 #elif defined(__BUILD_FOR_WINDOWS__)
-				s_TranceInstance = std::make_shared<Windows::Trance>();
+				s_TranceInstance = ITrancePtr(new Windows::Trance());
 #endif
-				return s_TranceInstance;
 			}
+
+			return s_TranceInstance;
 		}
 	}
 }
