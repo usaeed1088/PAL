@@ -1,6 +1,7 @@
 #pragma once
 
 #include "APIs/ITrance.h"
+#include "APIs/ITime.h"
 
 namespace PAL
 {
@@ -10,6 +11,7 @@ namespace PAL
 		{
 		private:
 			static ITrancePtr s_TranceInstance;
+			static ITimePtr s_TimeInstance;
 
 		private:
 			System();
@@ -19,6 +21,7 @@ namespace PAL
 
 		public:
 			static ITrancePtr Trance();
+			static ITimePtr Time();
 		};
 	}
 }

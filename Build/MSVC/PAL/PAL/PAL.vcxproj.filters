@@ -26,6 +26,12 @@
     <Filter Include="Common">
       <UniqueIdentifier>{baa23928-4e3d-4725-86dd-8191598b39a8}</UniqueIdentifier>
     </Filter>
+    <Filter Include="API\Windows\Time">
+      <UniqueIdentifier>{f81b4b28-c206-42a2-9fc1-3c5cab5b994e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="API\Unix\Time">
+      <UniqueIdentifier>{965b67be-1fcb-4279-a342-920cfedc9199}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -41,6 +47,12 @@
       <Filter>API\Windows\Trance</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\..\Lib\PAL.cpp" />
+    <ClCompile Include="..\..\..\..\Lib\API\Windows\Time\Time.cpp">
+      <Filter>API\Windows\Time</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Lib\API\Unix\Time\Time.cpp">
+      <Filter>API\Unix\Time</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\..\Lib\API\System.h">
@@ -59,5 +71,14 @@
       <Filter>Common</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\..\Lib\PAL.h" />
+    <ClInclude Include="..\..\..\..\Lib\API\APIs\ITime.h">
+      <Filter>API\APIs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Lib\API\Windows\Time\Time.h">
+      <Filter>API\Windows\Time</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Lib\API\Unix\Time\Time.h">
+      <Filter>API\Unix\Time</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

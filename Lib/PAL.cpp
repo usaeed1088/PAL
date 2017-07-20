@@ -21,6 +21,11 @@ namespace PAL
 		API::System::Trance()->Sleep(milliseconds);
 	}
 
+	std::uint64_t PAL::Milliseconds()
+	{
+		return API::System::Time()->Milliseconds();
+	}
+
 	std::shared_ptr<PAL> PAL::Instance()
 	{
 		if (s_PALInstance == nullptr)

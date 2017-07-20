@@ -17,6 +17,7 @@ namespace PAL
 		~PAL();
 
 		virtual void Sleep(std::uint32_t milliseconds);
+		virtual std::uint64_t Milliseconds();
 
 		static std::shared_ptr<PAL> Instance();
 	};

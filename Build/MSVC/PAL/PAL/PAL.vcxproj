@@ -131,16 +131,21 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\..\Lib\API\System.cpp" />
+    <ClCompile Include="..\..\..\..\Lib\API\Unix\Time\Time.cpp" />
     <ClCompile Include="..\..\..\..\Lib\API\Unix\Trance\Trance.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="..\..\..\..\Lib\API\Windows\Time\Time.cpp" />
     <ClCompile Include="..\..\..\..\Lib\API\Windows\Trance\Trance.cpp" />
     <ClCompile Include="..\..\..\..\Lib\PAL.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\..\..\Lib\API\APIs\ITime.h" />
     <ClInclude Include="..\..\..\..\Lib\API\APIs\ITrance.h" />
     <ClInclude Include="..\..\..\..\Lib\API\System.h" />
+    <ClInclude Include="..\..\..\..\Lib\API\Unix\Time\Time.h" />
     <ClInclude Include="..\..\..\..\Lib\API\Unix\Trance\Trance.h" />
+    <ClInclude Include="..\..\..\..\Lib\API\Windows\Time\Time.h" />
     <ClInclude Include="..\..\..\..\Lib\API\Windows\Trance\Trance.h" />
     <ClInclude Include="..\..\..\..\Lib\Common\Config.h" />
     <ClInclude Include="..\..\..\..\Lib\PAL.h" />
