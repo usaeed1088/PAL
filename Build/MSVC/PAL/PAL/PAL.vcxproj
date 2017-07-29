@@ -131,9 +131,12 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\..\Lib\API\System.cpp" />
-    <ClCompile Include="..\..\..\..\Lib\API\Unix\Time\Time.cpp" />
+    <ClCompile Include="..\..\..\..\Lib\API\Unix\Time\Time.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="..\..\..\..\Lib\API\Unix\Trance\Trance.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="..\..\..\..\Lib\API\Windows\Time\Time.cpp" />
     <ClCompile Include="..\..\..\..\Lib\API\Windows\Trance\Trance.cpp" />
