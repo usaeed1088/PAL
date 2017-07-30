@@ -130,7 +130,7 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\..\Lib\API\System.cpp" />
+    <ClCompile Include="..\..\..\..\Lib\API\Factory\Factory.cpp" />
     <ClCompile Include="..\..\..\..\Lib\API\Unix\Time\Time.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
@@ -140,18 +140,28 @@
     </ClCompile>
     <ClCompile Include="..\..\..\..\Lib\API\Windows\Time\Time.cpp" />
     <ClCompile Include="..\..\..\..\Lib\API\Windows\Trance\Trance.cpp" />
-    <ClCompile Include="..\..\..\..\Lib\PAL.cpp" />
+    <ClCompile Include="..\..\..\..\Lib\Object\Factory\Factory.cpp" />
+    <ClCompile Include="..\..\..\..\Lib\Object\Unix\Socket.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Lib\Object\Windows\Socket\Socket.cpp" />
+    <ClCompile Include="..\..\..\..\Lib\Instantiator.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\..\Lib\API\APIs\ITime.h" />
     <ClInclude Include="..\..\..\..\Lib\API\APIs\ITrance.h" />
-    <ClInclude Include="..\..\..\..\Lib\API\System.h" />
+    <ClInclude Include="..\..\..\..\Lib\API\Factory\Factory.h" />
     <ClInclude Include="..\..\..\..\Lib\API\Unix\Time\Time.h" />
     <ClInclude Include="..\..\..\..\Lib\API\Unix\Trance\Trance.h" />
     <ClInclude Include="..\..\..\..\Lib\API\Windows\Time\Time.h" />
     <ClInclude Include="..\..\..\..\Lib\API\Windows\Trance\Trance.h" />
     <ClInclude Include="..\..\..\..\Lib\Common\Config.h" />
-    <ClInclude Include="..\..\..\..\Lib\PAL.h" />
+    <ClInclude Include="..\..\..\..\Lib\Object\Factory\Factory.h" />
+    <ClInclude Include="..\..\..\..\Lib\Object\Objects\ISocket.h" />
+    <ClInclude Include="..\..\..\..\Lib\Object\Objects\SocketDefinitions.h" />
+    <ClInclude Include="..\..\..\..\Lib\Object\Unix\Socket.h" />
+    <ClInclude Include="..\..\..\..\Lib\Object\Windows\Socket\Socket.h" />
+    <ClInclude Include="..\..\..\..\Lib\Instantiator.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

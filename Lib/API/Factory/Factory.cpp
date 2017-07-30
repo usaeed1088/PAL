@@ -1,32 +1,35 @@
-#include "System.h"
+#include "Factory.h"
 
-#include "../Common/Config.h"
+#include "../../Common/Config.h"
 
-#include "Unix/Trance/Trance.h"
-#include "Unix/Time/Time.h"
+#include "../Unix/Trance/Trance.h"
+#include "../Unix/Time/Time.h"
 
-#include "Windows/Trance/Trance.h"
-#include "Windows/Time/Time.h"
+#include "../Windows/Trance/Trance.h"
+#include "../Windows/Time/Time.h"
 
 namespace PAL
 {
 	namespace API
 	{
-		ITrancePtr System::s_TranceInstance(nullptr);
-		ITimePtr System::s_TimeInstance(nullptr);
+		FactoryPtr Factory::s_Instance(nullptr);
 
-		System::System()
+		ITrancePtr Factory::s_TranceInstance(nullptr);
+		ITimePtr Factory::s_TimeInstance(nullptr);
+
+		Factory::Factory()
 		{
 
 		}
 
-		System::~System()
+		Factory::~Factory()
 		{
+			s_Instance = nullptr;
 			s_TranceInstance = nullptr;
 			s_TimeInstance = nullptr;
 		}
 
-		ITrancePtr System::Trance()
+		ITrancePtr Factory::GetTranceInstance()
 		{
 			if (s_TranceInstance == nullptr)
 			{
@@ -39,7 +42,7 @@ namespace PAL
 			return s_TranceInstance;
 		}
 
-		ITimePtr System::Time()
+		ITimePtr Factory::GetTimeInstance()
 		{
 			if (s_TimeInstance == nullptr)
 			{
@@ -50,6 +53,16 @@ namespace PAL
 #endif
 			}
 			return s_TimeInstance;
+		}
+
+		FactoryPtr Factory::Instance()
+		{
+			if (s_Instance == nullptr)
+			{
+				s_Instance = FactoryPtr(new Factory());
+			}
+
+			return s_Instance;
 		}
 	}
 }

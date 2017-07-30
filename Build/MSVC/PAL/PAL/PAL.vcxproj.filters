@@ -32,32 +32,62 @@
     <Filter Include="API\Unix\Time">
       <UniqueIdentifier>{965b67be-1fcb-4279-a342-920cfedc9199}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Object">
+      <UniqueIdentifier>{9a1b79c6-d406-4e29-8135-44ef646ba652}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\Objects">
+      <UniqueIdentifier>{d71ff44b-aafc-41b8-b07f-19020c93eac4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\Factory">
+      <UniqueIdentifier>{9ea11b59-18e0-438e-846f-8dbd2956825e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\Unix">
+      <UniqueIdentifier>{4f9e7740-e1a8-4b8b-b89b-eecbbd8ebb34}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\Windows">
+      <UniqueIdentifier>{fabfa3a8-bfb3-479a-969a-8974ee2b39ba}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\Windows\Socket">
+      <UniqueIdentifier>{c2ed8205-3a62-44fc-8ea2-e5cca20e44b3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\Unix\Socket">
+      <UniqueIdentifier>{5052b996-2c49-460b-b3e0-084cfd1a0b28}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="API\Factory">
+      <UniqueIdentifier>{1f7a18fb-94da-401d-9fc7-83b949dce714}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\..\Lib\API\System.cpp">
-      <Filter>API</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\..\..\Lib\API\Unix\Trance\Trance.cpp">
       <Filter>API\Unix\Trance</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\..\Lib\API\Windows\Trance\Trance.cpp">
       <Filter>API\Windows\Trance</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\Lib\PAL.cpp" />
     <ClCompile Include="..\..\..\..\Lib\API\Windows\Time\Time.cpp">
       <Filter>API\Windows\Time</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\..\Lib\API\Unix\Time\Time.cpp">
       <Filter>API\Unix\Time</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\..\..\Lib\Object\Windows\Socket\Socket.cpp">
+      <Filter>Object\Windows\Socket</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Lib\Object\Factory\Factory.cpp">
+      <Filter>Object\Factory</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Lib\Object\Unix\Socket.cpp">
+      <Filter>Object\Unix\Socket</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Lib\API\Factory\Factory.cpp">
+      <Filter>API\Factory</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\..\Lib\Instantiator.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\..\Lib\API\System.h">
-      <Filter>API</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\..\..\Lib\API\APIs\ITrance.h">
       <Filter>API\APIs</Filter>
     </ClInclude>
@@ -70,7 +100,6 @@
     <ClInclude Include="..\..\..\..\Lib\Common\Config.h">
       <Filter>Common</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\Lib\PAL.h" />
     <ClInclude Include="..\..\..\..\Lib\API\APIs\ITime.h">
       <Filter>API\APIs</Filter>
     </ClInclude>
@@ -80,5 +109,24 @@
     <ClInclude Include="..\..\..\..\Lib\API\Unix\Time\Time.h">
       <Filter>API\Unix\Time</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\..\..\Lib\Object\Objects\ISocket.h">
+      <Filter>Object\Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Lib\Object\Windows\Socket\Socket.h">
+      <Filter>Object\Windows\Socket</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Lib\Object\Objects\SocketDefinitions.h">
+      <Filter>Object\Objects</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Lib\Object\Factory\Factory.h">
+      <Filter>Object\Factory</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Lib\Object\Unix\Socket.h">
+      <Filter>Object\Unix\Socket</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Lib\API\Factory\Factory.h">
+      <Filter>API\Factory</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\..\Lib\Instantiator.h" />
   </ItemGroup>
 </Project>
