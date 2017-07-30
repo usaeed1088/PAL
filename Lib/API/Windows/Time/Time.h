@@ -17,6 +17,12 @@ namespace PAL
 			public:
 				~Time() override;
 
+				std::string DateFormat() override;
+
+				std::string TimeFormat() override;
+
+				std::string HumanReadableTimestamp(std::string format, bool fractionalSeconds) override;
+
 				std::uint64_t Milliseconds() override;
 			};
 		}
