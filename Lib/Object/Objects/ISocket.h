@@ -18,7 +18,7 @@ namespace PAL
 			virtual bool Close() = 0;
 
 			// Server socket
-			virtual bool Bind(const std::string addr, std::int32_t port) = 0;
+			virtual bool Bind(std::int32_t port) = 0;
 			virtual bool Listen() = 0;
 			virtual std::shared_ptr<ISocket> Accept() = 0;
 

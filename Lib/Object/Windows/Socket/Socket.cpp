@@ -76,9 +76,10 @@ namespace PAL
 			}
 
 			// Server socket
-			bool Socket::Bind(const std::string addr, std::int32_t port)
+			bool Socket::Bind(std::int32_t port)
 			{
-				SOCKADDR_IN sockAddr_in = SocketAddressToSOCKADDR_IN(addr, port, m_Family);
+				SOCKADDR_IN sockAddr_in = SocketAddressToSOCKADDR_IN(std::string(), port, m_Family);
+				sockAddr_in.sin_addr.S_un.S_addr = INADDR_ANY;	// Assign any network interface
 				return ::bind(m_Descriptor, (sockaddr*)&sockAddr_in, sizeof(SOCKADDR)) == 0;
 			}
 
@@ -96,8 +97,14 @@ namespace PAL
 				// Second argument is optional and will contain the address of the new socket
 				std::int64_t descriptor = ::accept(m_Descriptor, (sockaddr*)&sockAddr_in, &length_SOCKADDR_IN);
 
+				if (descriptor <= 0)
+				{
+					return nullptr;
+				}
+
 				std::shared_ptr<Socket> socket(new Socket(m_Type, m_Family));
-				// TODO: See if anything is needed to updated on this new Socket object?
+				// TODO: See if anything else is needed to updated on this new Socket object?
+				socket->m_Descriptor = descriptor;
 				return std::static_pointer_cast<ISocket>(socket);
 			}
 
@@ -105,7 +112,6 @@ namespace PAL
 			bool Socket::Connect(const std::string server, std::int32_t port)
 			{
 				SOCKADDR_IN sockAddr_in = SocketAddressToSOCKADDR_IN(server, port, m_Family);
-
 				return ::connect(m_Descriptor, (sockaddr*)&sockAddr_in, sizeof(SOCKADDR_IN)) == 0;
 			}
 

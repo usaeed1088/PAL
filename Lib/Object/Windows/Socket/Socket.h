@@ -25,7 +25,7 @@ namespace PAL
 				bool Close() override;
 
 				// Server socket
-				bool Bind(const std::string addr, std::int32_t port) override;
+				bool Bind(std::int32_t port) override;
 				bool Listen() override;
 				std::shared_ptr<ISocket> Accept() override;
 
