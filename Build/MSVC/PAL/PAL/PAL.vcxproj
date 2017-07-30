@@ -130,7 +130,9 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\..\Lib\API\Factory\Factory.cpp" />
+    <ClCompile Include="..\..\..\..\Lib\API\Factory\Factory.cpp">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)\APIFactory.obj</ObjectFileName>
+    </ClCompile>
     <ClCompile Include="..\..\..\..\Lib\API\Unix\Time\Time.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
@@ -140,7 +142,9 @@
     </ClCompile>
     <ClCompile Include="..\..\..\..\Lib\API\Windows\Time\Time.cpp" />
     <ClCompile Include="..\..\..\..\Lib\API\Windows\Trance\Trance.cpp" />
-    <ClCompile Include="..\..\..\..\Lib\Object\Factory\Factory.cpp" />
+    <ClCompile Include="..\..\..\..\Lib\Object\Factory\Factory.cpp">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)/ObjectFactory.obj</ObjectFileName>
+    </ClCompile>
     <ClCompile Include="..\..\..\..\Lib\Object\Unix\Socket.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
