@@ -8,7 +8,7 @@ namespace PAL
 {
 	namespace API
 	{
-		class ITime : std::enable_shared_from_this<ITime>
+		class ITime : public std::enable_shared_from_this<ITime>
 		{
 		public:
 			virtual ~ITime() {}

@@ -9,7 +9,7 @@ namespace PAL
 {
 	namespace Object
 	{
-		class Factory : std::enable_shared_from_this<Factory>
+		class Factory : public std::enable_shared_from_this<Factory>
 		{
 		private:
 			static std::shared_ptr<Factory> s_Instance;

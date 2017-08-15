@@ -9,7 +9,7 @@ namespace PAL
 {
 	namespace Object
 	{
-		class ISocket : std::enable_shared_from_this<ISocket>
+		class ISocket : public std::enable_shared_from_this<ISocket>
 		{
 		public:
 			virtual ~ISocket() {}

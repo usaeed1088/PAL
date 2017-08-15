@@ -11,7 +11,7 @@ namespace PAL
 			class Time : public ITime
 			{
 			private:
-				friend class System;
+				friend class Factory;
 				Time();
 
 			public:

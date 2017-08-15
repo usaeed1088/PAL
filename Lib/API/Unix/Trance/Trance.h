@@ -11,7 +11,7 @@ namespace PAL
 			class Trance : public ITrance
 			{
 			private:
-				friend class System;
+				friend class Factory;
 				Trance();
 
 			public:

@@ -7,7 +7,7 @@ namespace PAL
 {
 	namespace API
 	{
-		class ITrance : std::enable_shared_from_this<ITrance>
+		class ITrance : public std::enable_shared_from_this<ITrance>
 		{
 		public:
 			virtual ~ITrance() {}
