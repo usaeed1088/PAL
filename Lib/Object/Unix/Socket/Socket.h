@@ -15,6 +15,7 @@ namespace PAL
 				SocketType m_Type;
 				SocketFamily m_Family;
 
+				std::uint64_t m_Descriptor;
 			public:
 				Socket(SocketType type, SocketFamily family);
 				~Socket() override;
