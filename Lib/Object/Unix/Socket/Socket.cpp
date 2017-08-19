@@ -13,6 +13,7 @@
 #include <signal.h>
 #include <sys/time.h>
 #include <sys/ioctl.h>
+#include <fcntl.h>
 
 namespace PAL
 {
@@ -93,7 +94,7 @@ namespace PAL
 
 			bool Socket::Listen()
 			{
-				return ::listen(m_Descriptor, SOMAXCONN);
+				return ::listen(m_Descriptor, SOMAXCONN) == 0;
 			}
 
 			std::shared_ptr<ISocket> Socket::Accept()
@@ -113,6 +114,7 @@ namespace PAL
 				std::shared_ptr<Socket> socket(new Socket(m_Type, m_Family));
 				// TODO: See if anything else is needed to updated on this new Socket object?
 				socket->m_Descriptor = descriptor;
+				socket->SetNonBlocking();
 				return std::static_pointer_cast<ISocket>(socket);
 			}
 
@@ -126,8 +128,8 @@ namespace PAL
 			// Configurations
 			bool Socket::SetNonBlocking()
 			{
-				u_long arg = 1;
-				return ::ioctl(m_Descriptor, FIONBIO, &arg) == 0;
+				int flags = ::fcntl(m_Descriptor, F_GETFL, 0);
+				return ::fcntl(m_Descriptor, F_SETFL, flags | O_NONBLOCK) == 0;
 			}
 
 			// Data I/O
