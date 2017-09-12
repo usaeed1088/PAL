@@ -145,7 +145,7 @@
     <ClCompile Include="..\..\..\..\Lib\Object\Factory\Factory.cpp">
       <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)/ObjectFactory.obj</ObjectFileName>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\Lib\Object\Unix\Socket.cpp">
+    <ClCompile Include="..\..\..\..\Lib\Object\Unix\Socket\Socket.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="..\..\..\..\Lib\Object\Windows\Socket\Socket.cpp" />
@@ -163,7 +163,7 @@
     <ClInclude Include="..\..\..\..\Lib\Object\Factory\Factory.h" />
     <ClInclude Include="..\..\..\..\Lib\Object\Objects\ISocket.h" />
     <ClInclude Include="..\..\..\..\Lib\Object\Objects\SocketDefinitions.h" />
-    <ClInclude Include="..\..\..\..\Lib\Object\Unix\Socket.h" />
+    <ClInclude Include="..\..\..\..\Lib\Object\Unix\Socket\Socket.h" />
     <ClInclude Include="..\..\..\..\Lib\Object\Windows\Socket\Socket.h" />
     <ClInclude Include="..\..\..\..\Lib\Instantiator.h" />
   </ItemGroup>

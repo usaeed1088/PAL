@@ -31,6 +31,12 @@ namespace PAL
 				return sockAddr_in;
 			}
 
+			static inline void Sockaddr_inToSocketAddress(const sockaddr_in& sockAddr, std::string& addr, std::int32_t& port)
+			{
+				port = ntohs(sockAddr.sin_port);
+				addr = inet_ntoa(sockAddr.sin_addr);
+			}
+
 			Socket::Socket(SocketType type, SocketFamily family):
 				m_Type(type),
 				m_Family(family),
@@ -161,9 +167,9 @@ namespace PAL
 				}
 			}
 
-			std::vector<unsigned char> Socket::ReceiveFrom(const std::string source, std::int32_t port)
+			std::vector<unsigned char> Socket::ReceiveFrom(std::string& source, std::int32_t& port)
 			{
-				sockaddr_in sockAddr_in = SocketAddressToSockaddr_in(source, port, m_Family);
+				sockaddr_in sockAddr_in = {};
 				unsigned int sizeOf_SOCKADDR_IN = sizeof(sockaddr_in);
 
 				const int ReceiveBufferLength = 1024 * 10; //10KB
@@ -173,6 +179,7 @@ namespace PAL
 
 				if (n > 0)
 				{
+					Sockaddr_inToSocketAddress(sockAddr_in, source, port);
 					return std::vector<unsigned char>(buffer, buffer + n);
 				}
 

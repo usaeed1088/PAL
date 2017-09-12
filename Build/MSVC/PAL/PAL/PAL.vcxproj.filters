@@ -79,13 +79,13 @@
     <ClCompile Include="..\..\..\..\Lib\Object\Factory\Factory.cpp">
       <Filter>Object\Factory</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\..\Lib\Object\Unix\Socket.cpp">
-      <Filter>Object\Unix\Socket</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\..\..\Lib\API\Factory\Factory.cpp">
       <Filter>API\Factory</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\..\Lib\Instantiator.cpp" />
+    <ClCompile Include="..\..\..\..\Lib\Object\Unix\Socket\Socket.cpp">
+      <Filter>Object\Unix\Socket</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\..\Lib\API\APIs\ITrance.h">
@@ -121,12 +121,12 @@
     <ClInclude Include="..\..\..\..\Lib\Object\Factory\Factory.h">
       <Filter>Object\Factory</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\..\Lib\Object\Unix\Socket.h">
-      <Filter>Object\Unix\Socket</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\..\..\Lib\API\Factory\Factory.h">
       <Filter>API\Factory</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\..\Lib\Instantiator.h" />
+    <ClInclude Include="..\..\..\..\Lib\Object\Unix\Socket\Socket.h">
+      <Filter>Object\Unix\Socket</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

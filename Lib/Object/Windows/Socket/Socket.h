@@ -40,7 +40,7 @@ namespace PAL
 				bool SendTo(const std::string destination, std::int32_t port, const std::vector<unsigned char>& data) override;
 
 				std::vector<unsigned char> Receive() override;
-				std::vector<unsigned char> ReceiveFrom(const std::string source, std::int32_t port) override;
+				std::vector<unsigned char> ReceiveFrom(std::string& source, std::int32_t& port) override;
 			};
 		}
 	}
