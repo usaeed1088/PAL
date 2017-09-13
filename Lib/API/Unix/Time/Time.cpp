@@ -40,7 +40,10 @@ namespace PAL
 
 				std::stringstream ss;
 
-				ss << std::put_time(&tm, format.c_str());
+				char buffer[50] = {};
+
+				strftime(buffer, sizeof(buffer), format.c_str(), &tm);
+				ss << std::string(buffer);
 
 				if (fractionalSeconds)
 				{
